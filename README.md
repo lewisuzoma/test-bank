@@ -5,44 +5,44 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 # Section A: General Knowledge
 ## 1. What are the key security considerations when developing financial applications?
 When developing a financial application, managing and securing information is critical, this information includes personal information, financial transactions, account information, and debit and credit card information.
-•	Set firewalls to secure your network, and SQL Database firewall rules.
-•	Implement Monitoring and Logging.
-•	Encryption of Data in Transit and at Rest: Ensure sensitive data is encrypted using strong encryption algorithms, both during transmission and while stored.
-•	Role-based Access Control (RBAC): Restrict access to confidential data based on the user’s role and responsibilities.
-•	Cross-border Data Transfers: Ensure compliance with international data transfer regulations (e.g., GDPR) when transferring data across jurisdictions.
-•	Incident Response Plan: Prepare and regularly test an incident response plan to handle security incidents, breaches, and non-compliance with PCI DSS or ISO27001.
-•	Firewalls and Network Security: Configure firewalls to protect internal networks and segment sensitive areas such as databases with cardholder data (for PCI DSS).
+ - Set firewalls to secure your network, and SQL Database firewall rules.
+ - Implement Monitoring and Logging.
+ - Encryption of Data in Transit and at Rest: Ensure sensitive data is encrypted using strong encryption algorithms, both during transmission and while stored.
+ - Role-based Access Control (RBAC): Restrict access to confidential data based on the user’s role and responsibilities.
+ - Cross-border Data Transfers: Ensure compliance with international data transfer regulations (e.g., GDPR) when transferring data across jurisdictions.
+ - Incident Response Plan: Prepare and regularly test an incident response plan to handle security incidents, breaches, and non-compliance with PCI DSS or ISO27001.
+ - Firewalls and Network Security: Configure firewalls to protect internal networks and segment sensitive areas such as databases with cardholder data (for PCI DSS).
 
 ## 2. Describe the importance of compliance standards such as PCI-DSS and GDPR in financial applications.
 PCI DSS Controls (Payment Card Industry Data Security Standard)
 PCI DSS is a security standard for organizations that handle cardholder data (CHD). It establishes requirements to protect credit and debit card information and prevent fraud. It is essential for any software application that processes, stores, or transmits cardholder data.
 PCI DSS essentials: 
-•	It provides structural approach to ensure that credit card data are securely handled.
-•	Enforces encryption, tokenization, and secure payment processing methods to reduce fraud risk.
-•	Helps to reduce chances of data breaching by enforcing strong security controls.
+ - It provides structural approach to ensure that credit card data are securely handled.
+ - Enforces encryption, tokenization, and secure payment processing methods to reduce fraud risk.
+ - Helps to reduce chances of data breaching by enforcing strong security controls.
 
 
 GDPR (General Data Protection Regulation)
 GDPR is a set of rules on how personal data of individuals are collected, processed, and stored within the EU.
 GDPR essentials:
-1.	Lawfulness, fairness and transparency — Processing must be lawful, fair, and transparent to the data subject.
-2.	Purpose limitation — You must process data for the legitimate purposes specified explicitly to the data subject when you collected it.
-3.	Data minimization — You should collect and process only as much data as absolutely necessary for the purposes specified.
-4.	Accuracy — You must keep personal data accurate and up to date.
-5.	Storage limitation — You may only store personally identifying data for as long as necessary for the specified purpose.
-6.	Integrity and confidentiality — Processing must be done in such a way as to ensure appropriate security, integrity, and confidentiality (e.g. by using encryption).
-7.	Accountability — The data controller is responsible for being able to demonstrate GDPR compliance with all of these principles.
+ - Lawfulness, fairness and transparency — Processing must be lawful, fair, and transparent to the data subject.
+ - Purpose limitation — You must process data for the legitimate purposes specified explicitly to the data subject when you collected it.
+ - Data minimization — You should collect and process only as much data as absolutely necessary for the purposes specified.
+ - Accuracy — You must keep personal data accurate and up to date.
+ - Storage limitation — You may only store personally identifying data for as long as necessary for the specified purpose.
+ - Integrity and confidentiality — Processing must be done in such a way as to ensure appropriate security, integrity, and confidentiality (e.g. by using encryption).
+ - Accountability — The data controller is responsible for being able to demonstrate GDPR compliance with all of these principles.
 
 ## 3. Explain the concept of "idempotency" in financial transactions and why it's crucial.
 Idempotency ensures that if request is accidently sent twice payment will only be processed once. This is useful when requests can be retried due to network failures or timeouts. A unique identifier is sent with each request that ensures the request is processed only once, even if it is retried multiple times. For example if 10 naira transaction is initiated and the system experiences a network issue and the request is retried, an idempotent system will ensure that the same 10 naira isn’t transferred multiple times.
 
 ## 4. What are the potential risks of handling sensitive customer data, and how can they be mitigated?
 Sensitive customer data must be carefully protected to ensure compliance with privacy regulations and to maintain trust. Below are some strategies to mitigate risk from malicious actors:
-•	Encryption of Data in Transit and at Rest: Ensure sensitive data is encrypted using strong encryption algorithms, both during transmission and while stored.
-•	Role-based Access Control (RBAC): Restrict access to confidential data based on the user’s role and responsibilities.
-•	Data Integrity Monitoring: Implement tools to monitor and detect any unauthorized changes to sensitive data.
-•	Backups for Data Integrity: Regularly back up critical data and verify backups to ensure their integrity.
-•	Password Management: Enforce strong password policies and secure password storage mechanisms (e.g., hashed passwords with salt).
+ - Encryption of Data in Transit and at Rest: Ensure sensitive data is encrypted using strong encryption algorithms, both during transmission and while stored.
+ - Role-based Access Control (RBAC): Restrict access to confidential data based on the user’s role and responsibilities.
+ - Data Integrity Monitoring: Implement tools to monitor and detect any unauthorized changes to sensitive data.
+ - Backups for Data Integrity: Regularly back up critical data and verify backups to ensure their integrity.
+ - Password Management: Enforce strong password policies and secure password storage mechanisms (e.g., hashed passwords with salt).
 
 # Section B: Frontend Development
 ## 1.	How would you ensure the UI/UX of a banking web application is both user-friendly and secure?
